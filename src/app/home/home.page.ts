@@ -12,17 +12,27 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  pokemon:any = {
-    nome: null,
-    poder: null
-  };
-
-  constructor( 
-    public crudService: CrudService
-  ){ }
-
-  enviar() {
-    this.crudService.insert(this.pokemon, 'pokemons');
-  }
+  lista_compras: any = [
+    { nome: 'figado',
+      preco: 26.0,
+      marca: 'friboi',
+      promocao: true
+    },
+    { nome: 'chocolate',
+      preco: 2.5,
+      marca: 'lakita',
+      promocao: false
+    },
+    { nome: 'refrigerante',
+      preco: 5.0,
+      marca: 'it',
+      promocao: false
+    },
+    { nome: 'chiclete',
+      preco: 2.5,
+      marca: 'tridente',
+      promocao: true
+    }
+  ];
 
 }
