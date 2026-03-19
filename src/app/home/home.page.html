@@ -1,67 +1,30 @@
 <ion-content [fullscreen]="true">
+    <ion-list>
+        <ng-container *ngFor="let livro of this.livros">
+            <ion-item>
+                <ion-label>        
+                    Titulo: <h1>{{livro.titulo}}</h1>
+                </ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>        
+                    Sinopse: <h1>{{livro.sinopse}}</h1>
+                </ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>        
+                    Número de Páginas: <h1>{{livro.paginas}}</h1>
+                </ion-label>
+            </ion-item>
+            <ion-item>
+                <ion-label>Categorias:</ion-label><ng-container *ngFor='let categoria of livro.categoria'>
+                        <h3 *ngIf="categoria.nome == 'Científico'" style="color: green;">{{categoria.nome}}</h3>
+                        <h3 *ngIf="categoria.nome == 'Ficção Científica'" style="color: green;">{{categoria.nome}}</h3>
+                        <h3 *ngIf="categoria.nome == 'Auto-ajuda'" style="color: red;">{{categoria.nome}}</h3>
+                        <h3 *ngIf="categoria.nome == 'Romance'" style="color: pink;">{{categoria.nome}}</h3>
+                    </ng-container>
+            </ion-item>
 
-    <!-- botao do respeito -->
-    <ion-menu contentId="main-content">
-        <ion-header>
-            <ion-toolbar>
-                <ion-title>Configuração</ion-title>
-            </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">
-            <ion-row>
-                <ion-col size="3">
-                    <ion-avatar>
-                        <img src="https://pbs.twimg.com/media/EJ7gA47WwAENVIo.jpg">
-                    </ion-avatar>
-                </ion-col>
-                <ion-col size="9">
-                    <ion-item>
-                        barrigudinha seleide
-                    </ion-item>
-                    <ion-item>
-                        ba_sarada@hotmail.com
-                    </ion-item>
-                    <ion-item>
-                        @barrsa
-                    </ion-item>
-                </ion-col>
-            </ion-row>
-            <ion-col size="12+">
-                <ion-row>
-                    <ion-item>
-                        <ion-icon name="color-palette-outline" slot="start"></ion-icon>
-                        <ion-label>Tema</ion-label>
-                    </ion-item>
-                    <ion-item>
-                        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
-                        <ion-label>Resetar Senha</ion-label>
-                    </ion-item>
-                    <ion-item>
-                        <ion-icon name="trash-outline" slot="start"></ion-icon>
-                        <ion-label>Desativar Conta</ion-label>
-                    </ion-item>
-                </ion-row>      
-            </ion-col>
-        </ion-content>
-    </ion-menu>
-    <div class="ion-page" id="main-content">
-        <ion-header>
-            <ion-toolbar>
-                <ion-buttons slot="start">
-                    <ion-menu-button></ion-menu-button>
-                </ion-buttons>
-                <ion-title>versao v1.0</ion-title>
-            </ion-toolbar>
-        </ion-header>
-        <ion-content class="ion-padding">Mudar esse texto</ion-content>
-        <ion-content>
-            <ion-row>
-                <ion-col size="12">
-                    <ion-datetime>
-                    </ion-datetime>
-                </ion-col>
-            </ion-row>
-        </ion-content>
-    </div>    
-
+        </ng-container>
+    </ion-list>
 </ion-content>
