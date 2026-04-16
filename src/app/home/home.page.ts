@@ -11,5 +11,9 @@ import { Router } from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  veiculo: any = {
+    modelo: null,
+    marca: null,
+    cor: null
+  }
 }
