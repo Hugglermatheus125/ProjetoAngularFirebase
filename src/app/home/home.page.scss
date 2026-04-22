@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.alturatela {
+    height: 100vh;
+}
+
+
+.imagemfundo {
+    background-image: url(https://images.pexels.com/photos/10037413/pexels-photo-10037413.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.formulario {
+    background-color: aliceblue;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 70px;
+}
+
+ion-item {
+  --background: transparent;
+  --box-shadow: none;
+  --padding-start: 0;
+  --inner-padding-end: 0;
+    border: none;
+    color: black;
+    padding: 10px;
+    width: 500px;
+}
+
+button {
+    padding: 15px;
+    margin: 10px;
+    width: 25%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-top: 10px;
+}

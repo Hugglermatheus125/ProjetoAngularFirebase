@@ -1,15 +1,43 @@
 <ion-content fullscreen>
-    <ion-row>
-        <ion-col size="6" class="imagemfundo"></ion-col>
+    <ion-row class="alturatela">
+        <ion-col size="6" class="imagemfundo">
 
-        <ion-col size="6">
-            <div class="container">
-                <h1>Criar Conta</h1>
+        </ion-col>
 
-                <form (ngSubmit)="onSubmit()">
-                    <!-- coloque inputs aqui -->
+        <ion-col size="6" class="formulario">
+                <h1><strong>Criar Conta</strong></h1>
+
+                <form>
+                    <ion-item>
+                        <ion-label>Nome:</ion-label>
+                        <ion-input name="nome"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Email:</ion-label>
+                        <ion-input name="email" type="email"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Senha:</ion-label>
+                        <ion-input name="senha" type="password"></ion-input>
+                    </ion-item>
+
+                    <ion-item>
+                        <ion-label>Confirmar Senha:</ion-label>
+                        <ion-input name="confirmarSenha" type="password"></ion-input>
+                    </ion-item>
+
+                    <button style="background-color: rgb(129, 170, 87);" type="submit">Criar Conta</button>
                 </form>
-            </div>
+
+                <h2>Login com:</h2>
+
+                <button style="background-color: rgb(40, 40, 134);" type="button"><a href="#">Facebook</a></button>
+                <button style="background-color: rgb(49, 141, 141);" type="button"><a href="#">Twitter</a></button>
+                <button style="background-color: rgb(161, 46, 46);" type="button"><a href="#">Google</a></button>
+
+
         </ion-col>
     </ion-row>
 </ion-content>
